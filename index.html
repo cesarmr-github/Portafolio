@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpaperbat.com/img/231735-ubuntu-wallpaper-hd-desktop-wallpaper-4k-hd-linux.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .navbar {
+            background-color: #000; /* Negro */
+            padding: 10px 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: relative; /* Añadido para posicionar el icono */
+        }
+        .navbar a {
+            color: #fff; /* Blanco */
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #333; /* Gris oscuro al pasar el ratón */
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+            overflow: auto;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 20px;
+        }
+        .square {
+            width: 100%;
+            height: 600px;
+            box-sizing: border-box;
+            text-align: left;
+            display: none; /* Ocultar todas las secciones por defecto */
+        }
+        .active {
+            display: block; /* Mostrar solo la sección activa */
+        }
+        .circle-icon {
+            position: absolute;
+            top: 50%;
+            right: 5px; /* Ajustar la posición según sea necesario */
+            transform: translateY(-50%);
+            color: #ef6860; /* Cambiar el color del icono a rojo */
+            font-size: 15px; /* Tamaño del icono */
+            cursor: pointer;
+        }
+        .circle-icon2 {
+            position: absolute;
+            top: 50%;
+            right: 25px; /* Ajustar la posición según sea necesario */
+            transform: translateY(-50%);
+            color: #ebc12b; /* Cambiar el color del icono a rojo */
+            font-size: 15px; /* Tamaño del icono */
+            cursor: pointer;
+        }      
+        .circle-icon3 {
+            position: absolute;
+            top: 50%;
+            right: 45px; /* Ajustar la posición según sea necesario */
+            transform: translateY(-50%);
+            color: #37c54b; /* Cambiar el color del icono a rojo */
+            font-size: 15px; /* Tamaño del icono */
+            cursor: pointer;
+        }       
+        
+/* Estilos comunes para ambas barras laterales */
+.navbar2 {
+display:none;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* Ocultar el texto de los enlaces en la primera barra lateral */
+    .navbar a {
+        display: none;
+    }
+
+    /* Mostrar solo los iconos en la segunda barra lateral */
+    .navbar2.icons-only a {
+        display: inline-block;
+        text-align: center;
+        width: 33.33%; /* Para distribuir los iconos en tres columnas */
+    }
+
+    /* Asegurarse de que los iconos sean lo suficientemente grandes */
+    .navbar2.icons-only a i {
+        font-size: 24px; /* Tamaño de los iconos */
+        color: white; /* Color de los iconos */
+        padding: 10px; /* Espaciado alrededor de los iconos */
+    }
+}
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Agregar el enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="#" onclick="mostrarSeccion('inicio')"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#" onclick="mostrarSeccion('acerca')"><i class="fas fa-info-circle"></i> Acerca de</a>
+            <a href="#" onclick="mostrarSeccion('contacto')"><i class="fas fa-envelope"></i> Contacto</a>
+              
+            <!-- Usar un icono de círculo de Font Awesome -->
+            <i class="fas fa-circle circle-icon"></i>
+            <i class="fas fa-circle circle-icon2"></i>
+            <i class="fas fa-circle circle-icon3"></i>
+        </div>
+        <div class="navbar2 icons-only">
+            <a href="#" onclick="mostrarSeccion('inicio')"><i class="fas fa-home"></i></a>
+            <a href="#" onclick="mostrarSeccion('acerca')"><i class="fas fa-info-circle"></i></a>
+            <a href="#" onclick="mostrarSeccion('contacto')"><i class="fas fa-envelope"></i></a>
+        </div>        
+        <div class="content">
+            <div id="inicio" class="square active">
+                <h2>Bienvenido a mi página de inicio</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.                </p>
+            </div>
+            <div id="acerca" class="square">
+                <h2>Acerca de mí</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.                </p>
+            </div>
+            <div id="contacto" class="square">
+                <h2>Contacto</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            // Ocultar todas las secciones
+            var secciones = document.querySelectorAll('.square');
+            secciones.forEach(function(seccion) {
+                seccion.classList.remove('active');
+            });
+
+            // Mostrar la sección con el ID correspondiente
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
