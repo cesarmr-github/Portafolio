@@ -3,151 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Portfolio - Your Name</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('https://wallpaperbat.com/img/231735-ubuntu-wallpaper-hd-desktop-wallpaper-4k-hd-linux.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .container {
-            width: 60%;
-            margin: 50px auto;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .navbar {
-            background-color: #000; /* Negro */
-            padding: 10px 0;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            position: relative; /* Añadido para posicionar el icono */
-        }
-        .navbar a {
-            color: #fff; /* Blanco */
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .navbar a:hover {
-            background-color: #333; /* Gris oscuro al pasar el ratón */
-        }
-        .content {
-            background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
-            overflow: auto;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            padding: 20px;
-        }
-        .square {
-            width: 100%;
-            height: 600px;
-            box-sizing: border-box;
-            text-align: left;
-            display: none; /* Ocultar todas las secciones por defecto */
-        }
-        .active {
-            display: block; /* Mostrar solo la sección activa */
-        }
-        .circle-icon {
-            position: absolute;
-            top: 50%;
-            right: 5px; /* Ajustar la posición según sea necesario */
-            transform: translateY(-50%);
-            color: #ef6860; /* Cambiar el color del icono a rojo */
-            font-size: 15px; /* Tamaño del icono */
-            cursor: pointer;
-        }
-        .circle-icon2 {
-            position: absolute;
-            top: 50%;
-            right: 25px; /* Ajustar la posición según sea necesario */
-            transform: translateY(-50%);
-            color: #ebc12b; /* Cambiar el color del icono a rojo */
-            font-size: 15px; /* Tamaño del icono */
-            cursor: pointer;
-        }      
-        .circle-icon3 {
-            position: absolute;
-            top: 50%;
-            right: 45px; /* Ajustar la posición según sea necesario */
-            transform: translateY(-50%);
-            color: #37c54b; /* Cambiar el color del icono a rojo */
-            font-size: 15px; /* Tamaño del icono */
-            cursor: pointer;
-        }       
-        
-/* Estilos comunes para ambas barras laterales */
-.navbar2 {
-display:none;
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./1338573.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    background-attachment: fixed;
 }
 
-/* Estilos para dispositivos móviles */
+.container {
+    width: 60%;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #000;
+    padding: 10px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background-color: #712c2f;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+}
+
+.square {
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+    text-align: left;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.circle-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: #ef6860;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.circle-icon2 {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    color: #ebc12b;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.circle-icon3 {
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    color: #37c54b;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.navbar2 {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
-    /* Ocultar el texto de los enlaces en la primera barra lateral */
-    .navbar a {
+    .navbar2 {
+        background-color: #000;
+        padding: 2px 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        position: relative;
+    }
+    .navbar2 a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .navbar2 a:hover {
+        background-color: #712c2f;
+    }
+    .navbar {
         display: none;
     }
-
-    /* Mostrar solo los iconos en la segunda barra lateral */
-    .navbar2.icons-only a {
-        display: inline-block;
-        text-align: center;
-        width: 33.33%; /* Para distribuir los iconos en tres columnas */
+    .navbar2 {
+        display: block;
     }
-
-    /* Asegurarse de que los iconos sean lo suficientemente grandes */
     .navbar2.icons-only a i {
-        font-size: 24px; /* Tamaño de los iconos */
-        color: white; /* Color de los iconos */
-        padding: 10px; /* Espaciado alrededor de los iconos */
+        font-size: 14px;
+        color: white;
+        padding: 10px;
     }
 }
-
-
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Agregar el enlace a Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <a href="#" onclick="mostrarSeccion('inicio')"><i class="fas fa-home"></i> Inicio</a>
-            <a href="#" onclick="mostrarSeccion('acerca')"><i class="fas fa-info-circle"></i> Acerca de</a>
-            <a href="#" onclick="mostrarSeccion('contacto')"><i class="fas fa-envelope"></i> Contacto</a>
+            <a href="#" onclick="mostrarSeccion('home')"><i class="fas fa-home"></i> Home</a>
+            <a href="#" onclick="mostrarSeccion('projects')"><i class="fas fa-folder"></i> Projects</a>
+            <a href="#" onclick="mostrarSeccion('aboutme')"><i class="fas fa-info-circle"></i> About Me</a>
+            <a href="#" onclick="mostrarSeccion('contact')"><i class="fas fa-envelope"></i> Contact</a>
               
-            <!-- Usar un icono de círculo de Font Awesome -->
             <i class="fas fa-circle circle-icon"></i>
             <i class="fas fa-circle circle-icon2"></i>
             <i class="fas fa-circle circle-icon3"></i>
         </div>
         <div class="navbar2 icons-only">
-            <a href="#" onclick="mostrarSeccion('inicio')"><i class="fas fa-home"></i></a>
-            <a href="#" onclick="mostrarSeccion('acerca')"><i class="fas fa-info-circle"></i></a>
-            <a href="#" onclick="mostrarSeccion('contacto')"><i class="fas fa-envelope"></i></a>
+            <a href="#" onclick="mostrarSeccion('home')"><i class="fas fa-home"></i></a>
+            <a href="#" onclick="mostrarSeccion('projects')"><i class="fas fa-folder"></i></a>
+            <a href="#" onclick="mostrarSeccion('aboutme')"><i class="fas fa-info-circle"></i></a>
+            <a href="#" onclick="mostrarSeccion('contact')"><i class="fas fa-envelope"></i></a>
+
+            <i class="fas fa-circle circle-icon"></i>
+            <i class="fas fa-circle circle-icon2"></i>
+            <i class="fas fa-circle circle-icon3"></i>        
         </div>        
         <div class="content">
-            <div id="inicio" class="square active">
-                <h2>Bienvenido a mi página de inicio</h2>
+            <div id="home" class="square active">
+                <h2>Home</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.                </p>
             </div>
-            <div id="acerca" class="square">
-                <h2>Acerca de mí</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.                </p>
+            <div id="projects" class="square">
+                <h2>My projects</h2>
+                
+                <hr style="border: none; background-color: rgb(156, 56, 2); height: 1px;">
+               
+                <h3>Example</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.</p>
+                
+                <hr style="border: none; background-color: rgb(156, 56, 2); height: 1px;">
+                
+                <h3>Example</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.</p>
+                
+                <hr style="border: none; background-color: rgb(156, 56, 2); height: 1px;">
+                
+                <h3>Example</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.</p>                            
+                
+                <hr style="border: none; background-color: rgb(156, 56, 2); height: 1px;">
             </div>
-            <div id="contacto" class="square">
-                <h2>Contacto</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat cras, egestas tortor interdum tincidunt est congue nam. Fames ad porta platea habitant natoque suspendisse molestie, commodo magnis facilisis scelerisque integer condimentum eros, feugiat massa quisque urna mus justo. Ornare ante ultricies lacus conubia commodo suscipit nulla cubilia aliquet mi, tortor nostra quis velit integer consequat dui porta potenti nunc est, torquent class blandit parturient vel dapibus libero felis nisi.
-
-                </p>
+            <div id="aboutme" class="square">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis.</p>
+                    <ul>
+                        <li><strong>Location:</strong> [Your location]</li>
+                        <li><strong>Languages:</strong> [Languages you speak]</li>
+                        <li><strong>Interests:</strong> [Your main interests or hobbies]</li>
+                        <li><strong>Education:</strong> [Your educational level or area of study]</li>
+                        <li><strong>Skills:</strong> [Your main skills]</li>
+                        <li><strong>Experience:</strong> [Brief summary of your work experience]</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis.</p>
+                </div>
             </div>
+            
+            <div id="contact" class="square">
+                <h2>My contact information</h2>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Correo electrónico: ejemplo@example.com</li>
+                    <li><i class="fab fa-discord"></i> Discord: usuario#1234</li>
+                    <li><i class="fas fa-phone"></i> Teléfono: +123456789</li>
+                    <li><i class="fab fa-twitter"></i> Twitter: @ejemplo</li>
+                    <!-- Agrega más elementos según sea necesario -->
+                </ul>
+            </div>            
         </div>
     </div>
 
